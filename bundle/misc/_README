@@ -1,0 +1,4 @@
+
+This is the place to put the default layout such as the colors, syntax, etc.
+ 
+It works since Pathogen will auto add this into theruntime.
