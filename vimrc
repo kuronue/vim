@@ -10,6 +10,9 @@ let g:pathogen_disabled = ['vjde']
 " activate it
 call pathogen#infect() 
 
+" new style?
+" call pathogen#runtime_append_all_bundles()
+
 " change the theme (so that easier to see)
 set background=dark
 
