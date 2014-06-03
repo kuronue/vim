@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/hafizh/.ssh'
+let g:netrw_dirhist_2='/home/hafizh/opt/ansible/playbooks/roles/vm_provisioning'
+let g:netrw_dirhist_3='/home/hafizh/opt/ansible-ori/.git/refs/heads'
+let g:netrw_dirhist_4='/home/hafizh/opt/ansible/playbooks/roles/weblogic/tasks'
+let g:netrw_dirhist_5='/home/hafizh/opt/ansible/playbooks/roles/osb/vars'
+let g:netrw_dirhist_6='/home/hafizh/opt/ansible/playbooks/roles/osb/tasks'
+let g:netrw_dirhist_7='/home/hafizh/opt/ansible/playbooks/roles/osb/vars'
+let g:netrw_dirhist_8='/home/hafizh/.vimbakdir'
+let g:netrw_dirhist_9='/home/hafizh/opt/ansible/playbooks/host_vars'

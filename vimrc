@@ -13,9 +13,6 @@ call pathogen#infect()
 " new style?
 " call pathogen#runtime_append_all_bundles()
 
-" change the theme (so that easier to see)
-set background=dark
-
 
 " Plugins/Syntax supports
 " --------------------------------------------------------------------------
@@ -29,8 +26,11 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 
 " --- Taglist ---
 "let Tlist_Sort_Type = "name"
-let Tlist_Exit_OnlyWindow = 1
-nnoremap <silent> <F3> :TlistToggle<CR>
+"let Tlist_Exit_OnlyWindow = 1
+"nnoremap <silent> <F3> :TlistToggle<CR>
+" we now use TagBar. It looks better
+" --- Tagbar ----
+nnoremap <silent> <F3> :TagbarToggle<CR>
 
 " --- Supertab ---
 "for c-x c-u and normal
@@ -192,4 +192,6 @@ if has("win32")
     set noswapfile
 endif
 
+" change the theme (so that easier to see)
+set background=dark
 
