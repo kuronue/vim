@@ -179,8 +179,9 @@ au BufReadPre,BufNewFile *.hier set ft=hier
 au BufReadPre,BufNewFile *.pm set include=
 au BufReadPre,BufNewFile *.pl set include=
 
-" reduce space for yml from 4 --> 2
+" reduce space for yml from 4 --> 2 
 au BufReadPre,BufNewFile *.yml set ts=2 sw=2 ai
+au BufReadPre,BufNewFile *.wiki set ts=2 sw=2 ai
 
 colorscheme molokai
 if has("win32")
