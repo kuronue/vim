@@ -123,12 +123,38 @@ endfunction
 " --------------------------------------------------------------------------
 "  Mapping
 " --------------------------------------------------------------------------
-map <F5> :call Rotate_colorscheme()<CR>
-
 " toggle :pasting
 nnoremap <F4> :set invpaste paste?<CR>
 set pastetoggle=<F4>
 set showmode 
+
+map <F5> :call Rotate_colorscheme()<CR>
+
+function! LessMode()
+  if g:lessmode == 0
+    let g:lessmode = 1
+    let onoff = 'on'
+    " Scroll half a page down
+    noremap <script> d <C-D>
+    " Scroll one line down
+    noremap <script> j <C-E>
+    " Scroll half a page up
+    noremap <script> u <C-U>
+    " Scroll one line up
+    noremap <script> k <C-Y>
+  else
+    let g:lessmode = 0
+    let onoff = 'off'
+    unmap d
+    unmap j
+    unmap u
+    unmap k
+  endif
+  echohl Label | echo "Less mode" onoff | echohl None
+endfunction
+let g:lessmode = 0
+nnoremap <F6> :call LessMode()<CR>
+inoremap <F6> <Esc>:call LessMode()<CR>
 
 " --------------------------------------------------------------------------
 " General config
