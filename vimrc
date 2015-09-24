@@ -1,5 +1,5 @@
-" Basic
 " --------------------------------------------------------------------------
+" Basic
 " --------------------------------------------------------------------------
 " just to make sure vim is loaded
 set nocompatible
@@ -14,8 +14,8 @@ call pathogen#infect()
 " call pathogen#runtime_append_all_bundles()
 
 
-" Plugins/Syntax supports
 " --------------------------------------------------------------------------
+" Plugins/Syntax supports
 " --------------------------------------------------------------------------
 " prereq for many plugins
 syntax on
@@ -58,11 +58,14 @@ au BufReadPre,BufNewFile *.jsp let g:EclimHtmlValidate=0
 " --- bash/shell folding ---
 let g:sh_fold_enabled = 3
 
-" --- vjde --
+" --- vjde ---
 " disable it
 "let g:vjde_loaded = 1
 " it uses pathogen now, so disable via pathogen
 
+" --- vimwiki ---
+"map the HTML creation to F7
+map <F7> :VimwikiAll2HTML<cr>
 
 " Functions
 " --------------------------------------------------------------------------
