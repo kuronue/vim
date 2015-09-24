@@ -40,3 +40,9 @@
 [submodule "bundle/emmet"]
 	path = bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/ansible-yaml"]
+	path = bundle/ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = https://github.com/elzr/vim-json.git

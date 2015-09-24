@@ -1,5 +1,5 @@
-" Basic
 " --------------------------------------------------------------------------
+" Basic
 " --------------------------------------------------------------------------
 " just to make sure vim is loaded
 set nocompatible
@@ -14,8 +14,8 @@ call pathogen#infect()
 " call pathogen#runtime_append_all_bundles()
 
 
-" Plugins/Syntax supports
 " --------------------------------------------------------------------------
+" Plugins/Syntax supports
 " --------------------------------------------------------------------------
 " prereq for many plugins
 syntax on
@@ -58,11 +58,14 @@ au BufReadPre,BufNewFile *.jsp let g:EclimHtmlValidate=0
 " --- bash/shell folding ---
 let g:sh_fold_enabled = 3
 
-" --- vjde --
+" --- vjde ---
 " disable it
 "let g:vjde_loaded = 1
 " it uses pathogen now, so disable via pathogen
 
+" --- vimwiki ---
+"map the HTML creation to F7
+map <F7> :VimwikiAll2HTML<cr>
 
 " Functions
 " --------------------------------------------------------------------------
@@ -123,12 +126,38 @@ endfunction
 " --------------------------------------------------------------------------
 "  Mapping
 " --------------------------------------------------------------------------
-map <F5> :call Rotate_colorscheme()<CR>
-
 " toggle :pasting
 nnoremap <F4> :set invpaste paste?<CR>
 set pastetoggle=<F4>
 set showmode 
+
+map <F5> :call Rotate_colorscheme()<CR>
+
+function! LessMode()
+  if g:lessmode == 0
+    let g:lessmode = 1
+    let onoff = 'on'
+    " Scroll half a page down
+    noremap <script> d <C-D>
+    " Scroll one line down
+    noremap <script> j <C-E>
+    " Scroll half a page up
+    noremap <script> u <C-U>
+    " Scroll one line up
+    noremap <script> k <C-Y>
+  else
+    let g:lessmode = 0
+    let onoff = 'off'
+    unmap d
+    unmap j
+    unmap u
+    unmap k
+  endif
+  echohl Label | echo "Less mode" onoff | echohl None
+endfunction
+let g:lessmode = 0
+nnoremap <F6> :call LessMode()<CR>
+inoremap <F6> <Esc>:call LessMode()<CR>
 
 " --------------------------------------------------------------------------
 " General config
